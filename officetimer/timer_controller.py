@@ -17,7 +17,7 @@ def countdown_timer(given_time_seconds):
         given_time_seconds -= 1
 
 
-if __name__ == '__main__':
+def main():
     (options, args) = build_option_parser()
     given_time = options.given_time
     countdown_timer(given_time)
