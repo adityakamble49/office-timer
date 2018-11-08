@@ -11,7 +11,15 @@ pip install officetimer
 ## Usage
 
 ```bash
-office-timer -t 60
+office-timer -h
+Usage: office-timer [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -t GIVEN_TIME, --time=GIVEN_TIME
+                        Use HH:MM format for timer
+
+office-timer -t 7:30
 ```
 
 ## Development
