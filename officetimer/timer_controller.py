@@ -4,7 +4,7 @@ from optparse import OptionParser
 
 def build_option_parser():
     parser = OptionParser()
-    parser.add_option("-t", "--time", dest="given_time", type="string")
+    parser.add_option("-t", "--time", dest="given_time", type="string", help="Use HH:MM format for timer")
     return parser.parse_args()
 
 
@@ -21,10 +21,13 @@ def countdown_timer(given_time_seconds):
 def main():
     (options, args) = build_option_parser()
     given_time = options.given_time
-    hours = int(given_time.split(':')[0])
-    minutes = int(given_time.split(':')[1])
-    given_time_seconds = (hours * 3600) + (minutes * 60)
-    countdown_timer(given_time_seconds)
+    if given_time:
+        hours = int(given_time.split(':')[0])
+        minutes = int(given_time.split(':')[1])
+        given_time_seconds = (hours * 3600) + (minutes * 60)
+        countdown_timer(given_time_seconds)
+    else:
+        print("Use -h option to view help")
 
 
 if __name__ == '__main__':
