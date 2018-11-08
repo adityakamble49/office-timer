@@ -1,2 +1,2 @@
 python setup.py sdist bdist_wheel
-twine upload dist/* -r pypi
+twine upload dist\* -r pypi
