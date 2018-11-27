@@ -27,7 +27,7 @@ def main():
         given_time_seconds = (hours * 3600) + (minutes * 60)
         countdown_timer(given_time_seconds)
     else:
-        print("Use -h option to view help")
+        print("Use -h option to view help\n Developer: Aditya Kamble (adityakamble49.com)")
 
 
 if __name__ == '__main__':
